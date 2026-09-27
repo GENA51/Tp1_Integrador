@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 24px;
+  justify-content: left;
+}
+
+body {
+  font-family:Arial, Helvetica, sans-serif;
+  background-color: #faf6f1;
+}
+
+.barra{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #344a68;
+  background: linear-gradient(90deg, #0e3765, #1d598b);
+  color: white;
+}
+.links{
+  display: flex;
+  gap: 16px;
+}
+.links a{
+  color: #a5d0e1;
+}
+  .hero{
+   height: 320px;
+   background-color: #232f42;
+   background-image: url("https://images.squarespace-cdn.com/content/v1/57b39f3529687fab212904d1/1482288161783-RLVANSR699YTG6KIBWBX/07-GELATO-FINAL-7.jpg");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   color: #ffffff;
+   text-align:center;
+   font-size: large;
+   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.628);
+   filter:saturate(10px)
+}
+
+.post{
+  background-color: #ffffff;
+  border: 1px solid #e0d9cc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.post .contactos {
+background-color: red;
+border-color: red;
+}
+.prueba:hover{
+  .post{
+    background-color: red;
+  }
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.helado {
+  height: 90px;
+  border-radius: 6px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.galeria{
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 26px;
+  justify-content: center;
+  padding: 0 24px 24px;
+}
+section h2{
+  text-align: center;
+}
+.sabor{
+  background-color: white;
+  border: 1px solid #e0d9cc;
+  border-radius: 12px;
+  width: 300px;
+  padding: 16px;
+  transition: transform 1s ease;
+}
+.sabor:hover{
+  transform: scale(1.05);
+  filter: saturate(20px);
+}
+.sabor:nth-child(1) .helado { background-image: url(https://tse4.mm.bing.net/th/id/OIP.EVy5m3chI7-uPMxLKN3EkwHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3); }
+.sabor:nth-child(2) .helado { background-image: url(https://tse3.mm.bing.net/th/id/OIP.qdV1cexNG9Nw0mwg3-yJpgHaEJ?r=0&w=626&h=351&rs=1&pid=ImgDetMain&o=7&rm=3); }
+.sabor:nth-child(3) .helado { background-image: url(https://tse2.mm.bing.net/th/id/OIP.QX-kSgy9pe0XMZfPjtrIrwHaEH?r=0&rs=1&pid=ImgDetMain&o=7&rm=3); }
+.sabor:nth-child(4) .helado { background-image: url(https://media.diariouno.com.ar/p/447f4591f8ad3da45643c9f6c12ce3dd/adjuntos/298/imagenes/009/690/0009690808/1200x0/smart/helado-dulce-leche.jpg); }
+.sabor:nth-child(5) .helado { background-image: url(https://heladoscaseros.com/wp-content/uploads/2021/07/helado-de-crema-1980x1320.jpg); }
+.sabor:nth-child(6) .helado { background-image: url(https://i.pinimg.com/originals/c1/85/88/c185886beb0723ce27ba25932a26dfbd.jpg); }
+
+.contenedor{
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+}
+.pie{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 16px;
+  background-color:  #344a68;
+  background: linear-gradient(90deg, #0e3765, #1d598b);
+  color: #f5e6d3;
+}
+
+@media (max-width:900px){
+  .galeria{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (max-width:600px){
+  .galeria{
+    grid-template-columns: 1fr;
+  }
+  .sabor{
+      height: 180px;
+  }
+}
+
+.hide{
+  display: none;
+}
+.prueba:hover +.hide{
+  display: block;
+  background-color: rgba(200, 206, 212, 0.29);
+}
