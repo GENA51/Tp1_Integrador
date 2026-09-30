@@ -1,3 +1,7 @@
+:root{
+  --color-primario:#344a68;
+  --color-secundario:#faf6f1;
+}
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +17,7 @@ main {
 
 body {
   font-family:Arial, Helvetica, sans-serif;
-  background-color: #faf6f1;
+  background-color:var(--color-secundario);
 }
 
 .barra{
@@ -21,7 +25,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 12px 24px;
-  background-color: #344a68;
+  background-color: var(--color-primario);
   background: linear-gradient(90deg, #0e3765, #1d598b);
   color: white;
 }
@@ -32,38 +36,65 @@ body {
 .links a{
   color: #a5d0e1;
 }
-  .hero{
-   height: 320px;
-   background-color: #232f42;
-   background-image: url("https://images.squarespace-cdn.com/content/v1/57b39f3529687fab212904d1/1482288161783-RLVANSR699YTG6KIBWBX/07-GELATO-FINAL-7.jpg");
-   background-size: cover;
-   background-position: center;
-   background-repeat: no-repeat;
-   color: #ffffff;
-   text-align:center;
-   font-size: large;
-   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.628);
-   filter:saturate(10px)
+.hero{
+  height: 320px;
+  background-color: #232f42;
+  background-image: url("https://images.squarespace-cdn.com/content/v1/57b39f3529687fab212904d1/1482288161783-RLVANSR699YTG6KIBWBX/07-GELATO-FINAL-7.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  text-align:center;
+  font-size: large;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.628);
+  filter:saturate(10px)
 }
-
+.etiqueta-oferta{
+  position: absolute;
+  background-color: #e63998;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.etiqueta-top{
+  position: absolute;
+  background-color: #e63939;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
 .post{
   background-color: #ffffff;
-  border: 1px solid #e0d9cc;
+  border: 1px solid var(--color-secundario);
   border-radius: 8px;
   padding: 16px;
   margin-bottom: 16px;
+  transition: transform 1s ease;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  width: 80%;
+  margin: 10px auto;
+  color:var(--color-logo);
+  background-color: #fff; 
+  border: 5px solid  var(--color-primario); 
+  border-radius: 10px;
+}
+.post:hover{
+  border-color:var(--color-primario);
+  transform: scale(1.05);
 }
 
-.post .contactos {
-background-color: red;
-border-color: red;
+.descuento{
+background: linear-gradient(90deg, #17468b, #1d528b);
+border-radius: 8px;
+padding: 7px 7px;
+color: white;
 }
-.prueba:hover{
-  .post{
-    background-color: red;
-  }
-}
-
 .logo {
   font-weight: bold;
   font-size: 20px;
@@ -121,7 +152,7 @@ section h2{
   justify-content: space-around;
   padding: 16px;
   background-color:  #344a68;
-  background: linear-gradient(90deg, #0e3765, #1d598b);
+  background: linear-gradient(90deg, #0e3765, #1f71b4);
   color: #f5e6d3;
 }
 
@@ -138,12 +169,10 @@ section h2{
   .sabor{
       height: 180px;
   }
-}
-
-.hide{
-  display: none;
-}
-.prueba:hover +.hide{
-  display: block;
-  background-color: rgba(200, 206, 212, 0.29);
+  html,body{
+    overflow-x: hidden;
+  }
+  body{
+    position: relative;
+  }
 }
