@@ -20,6 +20,10 @@ body {
   background-color:var(--color-secundario);
 }
 
+h3{
+    text-align: center;
+    color: var(--color-primario);
+}
 .barra{
   display: flex;
   justify-content: space-between;
@@ -49,6 +53,7 @@ body {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.628);
   filter:saturate(10px)
 }
+
 .etiqueta-oferta{
   position: absolute;
   background-color: #e63998;
@@ -129,6 +134,7 @@ section h2{
 .sabor:hover{
   transform: scale(1.05);
   filter: saturate(20px);
+  border-color: var(--color-primario);
 }
 .sabor:nth-child(1) .helado { background-image: url(https://tse4.mm.bing.net/th/id/OIP.EVy5m3chI7-uPMxLKN3EkwHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3); }
 .sabor:nth-child(2) .helado { background-image: url(https://tse3.mm.bing.net/th/id/OIP.qdV1cexNG9Nw0mwg3-yJpgHaEJ?r=0&w=626&h=351&rs=1&pid=ImgDetMain&o=7&rm=3); }
